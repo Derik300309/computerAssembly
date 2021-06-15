@@ -513,6 +513,7 @@ header .content .cards .card h2
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 .teachers .cards .card
 {
@@ -574,4 +575,201 @@ footer .links ul li
     background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
     border-radius: 50px;
     margin: 0 10px;
+}
+@media (max-width: 991px)
+{
+    /******************NAVIGATION*****************/
+    nav
+    {
+        padding: 10px 0 10px 40px;
+    }
+    nav .logo
+    {
+        position: relative;
+        max-width: 60px;
+    }
+    nav ul
+    {
+        position: fixed;
+        top: 0;left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        z-index: 1;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        transition: all 0.2s;
+        color: #111;
+        visibility: hidden;
+        opacity: 0;
+    }
+    nav ul.active
+    {
+        visibility: visible;
+        opacity: 1;
+    }
+    nav ul li a
+    {
+        display: inline-block;
+        color: #111;
+        font-weight: 400;
+        margin-left: 0;
+        text-decoration: none;
+        font-size: 2em;
+        margin: 10px 0;
+    }
+    nav ul li a:hover
+    {
+        color: #ed0223;
+    }
+    .toggleMenu
+    {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background-image: url(../img/menu.png);
+        background-position: center;
+        background-size: 30px;
+        background-repeat: no-repeat;
+        z-index: 2;
+        cursor: pointer;
+        top: 20;
+        right: 40;
+        display: block;
+    }
+    .toggleMenu.active
+    {
+        background-position: center;
+        background-size: 20px;
+        background-image: url(../img/close.png);
+        background-repeat: no-repeat;
+        -webkit-filter: invert(1);
+                filter: invert(1);
+        position: fixed;
+        right: 10px;
+    }
+    /********HEADER*******/
+    header
+    {
+        padding: 5px;
+    }
+    header .content
+    {
+        min-width: 100%;
+        max-width: 100%;
+    }
+    header .content h1
+    {
+        font-size: 36px;
+        font-weight: 700;
+    }
+    header .content .cards
+    {
+        flex-wrap: wrap;
+    }
+    header .content .cards .card
+    {
+        margin: 10px;
+    }
+    /**********STUDENTS**********/
+    .students .content
+    {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+    .students .content img
+    {
+        max-width: 300px;
+    }
+    /**********ABOUT********/
+    .about
+    {
+        padding: 0 5px;
+    }
+    .about .content
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    .about .imgBox
+    {
+        max-width: 280px;
+    }
+    .about .imgBox img
+    {
+        max-width: 100%;
+        transform: translateY(20px);
+    }
+    .about .textBox
+    {
+        max-width: 100%;
+    }
+    /**********START******/
+    .start
+    {
+        padding: 5px;
+    }
+    .start .content
+    {
+        max-width: 60%;
+        min-width: 60%;
+    }
+    .start .content .progress
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    /*******PROFESSION*******/
+    .profession
+    {
+        padding: 0;
+    }
+    .profession .content h1
+    {
+        font-size: 24px;
+        font-weight: 700;
+    }
+    .profession .content .cards
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    /*********PARTNERS*********/
+    .partners
+    {
+        padding: 0;
+    }
+    .partners .content h1
+    {
+        font-size: 24px;
+    }
+    /**********TEACHERS*********/
+    .teachers
+    {
+        padding: 0;
+    }
+    .teachers .content h1
+    {
+        font-size: 26px;
+        font-weight: 700;
+    }
+}
+@media (max-width: 425px)
+{
+    .start .content
+    {
+        max-width: 100%;
+        min-width: 100%;
+    }
 }
